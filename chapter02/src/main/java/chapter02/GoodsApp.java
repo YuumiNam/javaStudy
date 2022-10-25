@@ -8,11 +8,11 @@ public class GoodsApp {
 //		camera.price = 400000;           참조하기 위해서는 따로 setter와 getter메소드를 만들어서 접근을 해준다
 //		camera.countStock = 30;
 //		camera.countSold = 50;
+		
 		camera.setName("nikon");
 		camera.setPrice(400000);
 		camera.setCountStock(30);
 		camera.setCountSold(50);
-		
 		
 		
 		System.out.println(camera); // goods클래스에 가서 source - generate to string해주면 우리가 아는 문자열로 나옴
@@ -26,6 +26,12 @@ public class GoodsApp {
 		System.out.println(camera.getPrice());
 		System.out.println(camera.getCountStock());
 		System.out.println(camera.getCountSold());
-
+		
+		
+		
+		Goods g1 = new Goods();
+		Goods g2 = new Goods();
+		Goods g3 = new Goods();
+		System.out.println(Goods.countOfGoods);
 	}
 }
