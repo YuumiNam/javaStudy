@@ -14,6 +14,7 @@ public class Goods {
 	private int countSold;
 	
 	// 생성자 (생성자를 개발자가 한개도 안만들어준다면 기본생성자가 만들어짐)
+	// 객체를 만들때 new Goods();를 쓸수있는 이유도 기본생성자 Goods()가 만들어지기 때문에 가능한것!!
 	public Goods() {
 		countOfGoods++;
 	}
@@ -47,9 +48,17 @@ public class Goods {
 		this.countSold = countSold;
 	}
 	
+	
+	public int calcDiscountPrice(double discountRate) {
+		return (int)(price * discountRate);
+	}
+	
+	
 	@Override
 	public String toString() {
 		return "Goods [name=" + name + ", price=" + price + ", countStock=" + countStock + ", countSold=" + countSold
 				+ "]";
 	}
+
+	
 }

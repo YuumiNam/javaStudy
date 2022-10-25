@@ -27,11 +27,12 @@ public class GoodsApp {
 		System.out.println(camera.getCountStock());
 		System.out.println(camera.getCountSold());
 		
-		
-		
-		Goods g1 = new Goods();
-		Goods g2 = new Goods();
-		Goods g3 = new Goods();
+	
 		System.out.println(Goods.countOfGoods);
+		
+		// return값과 파라미터가 모두 필요한 메소드를 짜보자
+		// 메소드를 만들기전에 일단 있다고 생각하고 코드를 짜보자
+		int discountPrice = camera.calcDiscountPrice(0.5);
+		System.out.println("Discout Price : " + discountPrice);
 	}
 }
