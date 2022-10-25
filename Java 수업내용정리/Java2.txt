@@ -1,0 +1,58 @@
+1. 이클립스 설정
+(window > preferences가 설정임)
+
+	1. encoding으로 검색
+	Content Types - Text에있는 CSS부터 UTF-8로 맞춰줌 (단, java Properties File 빼고!!!!)	
+	Content Types밑에있는 Workspace, web, XML 다~ UTF-8로
+
+	2. spelling으로 검색
+	Enable spell checking 체크 해제
+
+
+2. 이클립스 설정2
+(window > perspective > open perspective > java)
+동시에 여러가지 인터페이스 가능 (javaEE , java 많이씀)
+
+window > show view > project explorer
+
+
+3. 이클립스 설정3
+(window > preferences > java > compiler > 컴파일러레벨 설치했을때 버전으로바꿈)
+(window > preferences > java > installed JREs > 기존꺼지우고 jdk가 설치되어있는 곳으로 설정)
+
+
+4. 이클립스에서 git실행방법
+(window > show view > others > Git Repositories)
+	
+	1. git init
+	프로젝트우클릭 > team > share project > Use or create...체크, Create Repository클릭
+	(Git Repositories에서 잘 만들어졌나 확인)
+
+	2. remote생성,연결
+	깃허브 > repositories생성 후 url복사 > developer settings가서 personal access tokens에 있는 키 복사 >
+	이클립스 > git repositories가서 remote 우클릭 > configure fetch클릭 > url change > url 붙여넣기, Authentication user password(access tokens) 넣기 > save and fetch
+	
+	3. 커밋 and 푸쉬
+	프로젝트우클릭 > team > commit
+
+	*. git연결 해제방법
+	프로젝트우클릭 > team > disconnect
+	git Repositories > master우클릭 > delete repositories > 꼭 첫번째 체크박스만!!
+
+	*. .gitignore에 넣어야할것
+	**/bin
+	**/.settings
+	**/.classpath
+	**/.project
+
+
+5. 이클립스에서 clone 하는법
+(일반적인 git clone을 하게되면 안됨... 코드만 불러오고 실제 소스는 못불러와서 따로놀기때문)
+(따라서 각 클래스를 하나로 묶어주는 빌드가 필요함(메이븐프로젝트) , 'pom.xml'이라는 파일에 넣음)
+(자바는 이 'pom.xml'을 불러올때 알아서 자바파일로 바꿔주는 import기능이 있음)
+
+메이븐프로젝트 생성하는법 : file > new > project > maven project
+(실무에서는 자바프로젝트보다 메이븐프로젝트에다가 작업함)
+
+깃허브에 있는 메이븐프로젝트 clone(import)하는법 : Git Repositories > 우클릭 > clone
+					> (아직 실제 프로젝트에는 없음) working tree 우클릭 > import

@@ -1,0 +1,62 @@
+1. if문
+if ( 조건 ) {
+     ( 실행 );     
+} else if ( 조건) {
+     ( 실행 );
+} else {
+     ( 실행 );
+}
+
+
+
+2. switch문
+switch ( 변수 ) {          <<<   변수는 == 관계만 가능('<'나'>'는 표현이 안됨)
+     case : ( 값 ) {
+        ( 실행 );
+        break;                <<<   break은 필요할때만
+   }
+     case : (값) {
+        ( 실행 );
+        break;
+   }
+      default : {
+        ( 실행 );
+        break;
+   }   
+}
+
+
+
+3. for문
+for (변수 ; 범위 ; 변수증가값) {
+                ( 실행 )
+}
+
+4. continue
+if문이나 for문 같은 곳에서 continue를 만나면 실행하지 않고 다시 위로 올라감
+
+5. break
+if문이나 for문 같은곳에 break를 만나면 그 즉시 실행이 끝남
+
+6. 구구단 가로열로 출력하기
+"\n" = 한줄 띄어쓰기
+"\t" = tab
+sysout에서 println중 ln을 빼면 한줄 띄어쓰기를 안함
+
+
+
+
+7. practice문제풀기
+(문제4)
+for(int i = 0; i < text.length(); i++) {
+	char c = text.charAt(i);
+	System.out.println(c);
+}
+
+
+(문제5)
+"정수에 3이나 6이나 9가 있는지 어케알지??"
+ex)
+int i = 36;
+int count = 0;
+String number = String.valueof(i);   <<<   문자열로 바꿔줌

@@ -1,0 +1,38 @@
+1. 요즘 개발자시장의 선호도 관계, java의 위치 
+web 
+|
+Java : 웹 서버 어플리케이션 (백엔드) : spring
+Javascript(node.js) : 웹 서버 어플리케이션 (백엔드) : express.js
+
+javascript : 웹 클라이언트 어플리케이션 (프론트엔드) : vue.js, react, angular.js
+
+
+
+web
+|
+python : 웹 서버 어플리케이션 (백엔드) : Django, flask 
+(클라이언트(프론트엔드)는 없음)
+
+
+
+data analysis, ml(머신러닝), dl(딥러닝)
+|
+python이 독보적
+
+
+2. 자바 설치
+JavaSE = JDK(개발환경,컴파일러,실행파일) + JRE(실행파일)
+ 	개발자용		                    일반인용
+
+ex)
+hello.java    --->   hello.class   (컴파일을 어디서했든 window,linux에서 둘다 돌릴 수 있다. C언어는 컴파일을 했던 곳에서만 돌릴수있음. 파이썬은 컴파일을 안거침)
+	(컴파일)
+
+
+메모장켜고 HelloWolrd.java 작성
+cmd 들어가서 javac HelloWorld.java 실행
+(컴파일된 파일 = HelloWorld.class)
+java HelloWorld로 실행
+
+
+
