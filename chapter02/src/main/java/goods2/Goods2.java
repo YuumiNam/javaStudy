@@ -1,4 +1,4 @@
-package mypackage;
+package goods2;
 
 public class Goods2 {
 	public String name; // 접근제어자 public : 모든 접근이 가능하다

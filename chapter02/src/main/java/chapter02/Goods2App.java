@@ -1,6 +1,6 @@
 package chapter02;
 
-import mypackage.Goods2;
+import goods2.Goods2;
 
 public class Goods2App {
 	public static void main(String[] args) {
