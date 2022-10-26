@@ -19,6 +19,16 @@ public class Goods {
 		countOfGoods++;
 	}
 	
+	public Goods(String name, int price, int countStock, int countSold) {
+		// countOfGoods++ 해줄수있도록 기본생성자를 가져옴
+		this();
+		
+		this.name = name;
+		this.price = price;
+		this.countStock = countStock;
+		this.countSold = countSold;
+	}
+	
 	// 메소드 (public을 많이씀)
 	public void setName(String name) {
 		this.name = name;
@@ -53,6 +63,11 @@ public class Goods {
 		return (int)(price * discountRate);
 	}
 	
+	
+//	public void showInfo() {
+//		System.out.println("Goods [name=" + name + ", price=" + price + ", countStock=" + countStock + ", countSold=" + countSold
+//				+ "]");
+//	}
 	
 	@Override
 	public String toString() {

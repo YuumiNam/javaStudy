@@ -34,5 +34,10 @@ public class GoodsApp {
 		// 메소드를 만들기전에 일단 있다고 생각하고 코드를 짜보자
 		int discountPrice = camera.calcDiscountPrice(0.5);
 		System.out.println("Discout Price : " + discountPrice);
+		
+		
+		Goods g4 = new Goods("TV", 10000, 10, 0);
+		System.out.println(g4);
+		System.out.println(Goods.countOfGoods);
 	}
 }

@@ -12,5 +12,12 @@ public class SongMain {
 		s.setTrack(3);
 		
 		s.show();
+		
+		
+		Song s2 = new Song("LoveDive", "IVE", "LoveDive", "Jamie Parker외 3명", 2022, 1);
+		s2.show();
+		
+		Song s3 = new Song("사건의지평선", "윤하");
+		s3.show();
 	}
 }
