@@ -2,11 +2,13 @@ package paint;
 
 public class Main {
 	public static void main(String[] args) {
-		Point pt = new Point();
-		pt.setX(10);
-		pt.setY(50);
+		Point pt = new Point(10, 50);
+//		pt.setX(10);
+//		pt.setY(50);
 		
 		drawPoint(pt);
+		// pt.disappear();
+		pt.show(false);
 	}
 	
 	// 이렇게 짜게되면 나중에 확장성이 문제가됨
