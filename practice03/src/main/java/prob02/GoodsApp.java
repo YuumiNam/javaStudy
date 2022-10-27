@@ -21,6 +21,9 @@ public class GoodsApp {
 		int countStock = Integer.parseInt(info[2]);
 		
 		
+		
+		System.out.println(name + price + countStock);
+		System.out.println(goods);
 		// 상품 출력
 		
 		

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Prob1 {
 	public static void main(String[] args) {
-		Scanner sc = new Scanner( System.in );
+		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("수를 입력하시오 : ");
 		int i = sc.nextInt();
