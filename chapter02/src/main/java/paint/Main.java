@@ -13,10 +13,10 @@ public class Main {
 		
 		// ColorPoint pt2 = new ColorPoint(); 이렇게 쓰지말고 부모를 레퍼런싱해라
 		// 진정한 overriding = 부모를 참조하는것!
-		Point pt2 = new ColorPoint();
-		pt2.setX(100);
-		pt2.setY(200);
-		((ColorPoint)pt2).setColor("red");
+		Point pt2 = new ColorPoint(100, 200, "red");
+		// pt2.setX(100);
+		// pt2.setY(200);
+		// ((ColorPoint)pt2).setColor("red");
 		
 //		drawColorPoint(pt2); 부모를 레퍼런싱했다면 쓸 필요가없었던 함수
 		drawPoint(pt2);
