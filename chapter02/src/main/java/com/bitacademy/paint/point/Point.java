@@ -15,7 +15,7 @@ public class Point implements Drawable {
 		this.y = y;
 	}
 	
-	// 메소드
+	// getter setter
 	public int getX() {
 		return x;
 	}
@@ -29,6 +29,8 @@ public class Point implements Drawable {
 		this.y = y;
 	}
 	
+	
+	// 메소드
 	public void show(boolean visible) {
 		if(visible) {
 			show(); // 메소드 오버로드
