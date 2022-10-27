@@ -1,6 +1,6 @@
 package prob05;
 
-public class Main {
+public class BaseMain {
 
 	public static void main(String[] args) {
 		Base base = new MyBase(); // upcasting

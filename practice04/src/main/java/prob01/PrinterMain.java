@@ -1,6 +1,6 @@
 package prob01;
 
-public class PrinterTest {
+public class PrinterMain {
 	public static void main(String[] args) {
 		Printer printer = new Printer();
 
