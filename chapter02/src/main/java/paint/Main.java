@@ -44,6 +44,16 @@ public class Main {
 		// 글씨쓰기
 		GraphicText gt = new GraphicText("Hello World");
 		draw(gt);
+		
+		// instanceof연산자
+		System.out.println(circle instanceof Object);
+		System.out.println(circle instanceof Shape);
+		System.out.println(circle instanceof Circle);
+		// 오류 : System.out.println(circle instanceof Rectangle); instanceof에서 class자리에는 상위와 하위만 쓸수있음
+		
+		// 하지만, interface는 상관없이 instanceof연산자를 사용가능 "상속이 됐냐 안됐냐가 아닌, 기능이 구현됐냐 안됐냐의 문제이기 때문"
+		System.out.println(circle instanceof Drawable);
+		System.out.println(circle instanceof Runnable);
 	}
 	
 	
