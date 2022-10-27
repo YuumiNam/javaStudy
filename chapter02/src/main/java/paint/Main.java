@@ -7,7 +7,8 @@ public class Main {
 	    // pt.setX(10);
         // pt.setY(50);
 		
-		drawPoint(pt1);
+		// drawPoint(pt1); 인터페이스를 썼다면 쓸 필요가없었던 함수
+		draw(pt1);
 		// pt.disappear();
 		pt1.show(false);
 		
@@ -21,34 +22,42 @@ public class Main {
 		// ((ColorPoint)pt2).setColor("red");
 		
 		// drawColorPoint(pt2); 부모를 레퍼런싱했다면 쓸 필요가없었던 함수
-		drawPoint(pt2);
+		// drawPoint(pt2); 인터페이스를 썼다면 쓸 필요가없었던 함수
+		draw(pt2);
 		
 		
 		// 세모 그리기
 		Triangle triangle = new Triangle();
-		drawShape(triangle); // up casting
-		
+		// drawShape(triangle); 인터페이스를 썼다면 쓸 필요가없었던 함수 // up casting 
+		draw(triangle);
 		
 		// 네모 그리기
 		Rectangle rectangle = new Rectangle();
-		drawShape(rectangle);
-		
+		// drawShape(rectangle); 인터페이스를 썼다면 쓸 필요가없었던 함수
+		draw(rectangle);
 		
 		// 원 그리기
 		Circle circle = new Circle();
-		drawShape(circle);
+		// drawShape(circle); 인터페이스를 썼다면 쓸 필요가없었던 함수
+		draw(circle);
+		
+		// 글씨쓰기
+		GraphicText gt = new GraphicText("Hello World");
+		draw(gt);
 	}
 	
 	
+
 	// 정적 메소드
-	
-//	public static void draw(IDrawable drawble) {
-//		
-//	}
-	
-	public static void drawPoint(Point pt) {
-		pt.show();
+	public static void draw(Drawable drawble) {
+		drawble.draw();
 	}
+	
+	
+//	인터페이스를 쓴다면 필요없는 메소드
+//	public static void drawPoint(Point pt) {
+//		pt.show();
+//	}
 	
 	
 //  이렇게 짜게되면 나중에 확장성이 문제가됨
@@ -59,7 +68,8 @@ public class Main {
 //	}
 	
 	
-	public static void drawShape(Shape shape) {
-		shape.draw();
-	}
+//	인터페이스를 쓴다면 필요없는 메소드
+//	public static void drawShape(Shape shape) {
+//		shape.draw();
+//	}
 }

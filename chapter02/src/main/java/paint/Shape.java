@@ -1,6 +1,6 @@
 package paint;
 
-public abstract class Shape {
+public abstract class Shape implements Drawable {
 	// 필드
 	private String lineColor;
 	private String fillColor;
@@ -25,5 +25,6 @@ public abstract class Shape {
 	
 	
 	// 메소드
+	@Override
 	public abstract void draw();
 }
