@@ -10,7 +10,7 @@ public class GoodsApp {
 		Scanner sc = new Scanner(System.in);
 		Goods[] goods = new Goods[COUNT_GOODS];
 
-		// 상품 입력
+		// 상품 입력	
 		String line = sc.nextLine();
 		String[] info = line.split(" ");
 		
@@ -20,15 +20,14 @@ public class GoodsApp {
 		int price = Integer.parseInt(info[1]);
 		int countStock = Integer.parseInt(info[2]);
 		
-		
-		
-		System.out.println(name + price + countStock);
-		System.out.println(goods);
-		// 상품 출력
-		
-		
+		insert(goods);
 		
 		// 자원정리
 		sc.close();
 	}
+	
+	public static void insert(Goods[] goods) {
+		
+	}
+	
 }
