@@ -15,7 +15,7 @@ public class SwapTest03 {
 		
 	}
 	
-	
+	// 정적 메소드
 	public static void swap(SwapValue m, SwapValue n) {
 		int temp = m.value;
 		m.value = n.value;
