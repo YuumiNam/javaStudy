@@ -1,0 +1,59 @@
+1. 예외처리란?
+프로그램이 실행되는 동안 발생할수있는 비정상적인 조건
+(번역시의 에러가 아닌 실행시의 에러)
+
+
+<공식>
+try{
+  '예외가 발생할 실행문'
+} catch(처리할타입선언) {
+  '예외 처리문'
+}
+
+
+2. 예외처리 과정 (try - catch문)
+int a = 10;
+int b = 10 - a;
+		
+try {
+
+int result = (1 + 2 + 3) / b;    <<<  b는 0이기 때문에 에러남		
+
+} catch(ArithmeticException ae) {   <<<  모든 예외의 상위타입클래스는 'Exception'임
+// 1) 사과
+System.out.println("일시적인 오류가 있습니다.");
+			
+// 2) 로깅
+System.out.println("error:" +ae);
+
+// 3) 정상종료
+// System.exit(0)
+return;
+} finally {   <<<   옵션임. 예외가 발생하거나 정상적으로 실행되어도 반드시 실행되는 블록
+
+}
+
+
+
+3. Unchecked Exception
+예외처리 없이 발생해야한다.
+예외를 보고 수정해야 하는 로직에 대한 에러이기 때문(본인이 잘못짠 코드르 그냥 고치면 된다는 뜻)
+
+<Unchecked Exception> "내가 코드를 잘못짰기때문에 생긴 에러"
+ArrayIndexOutOfBoundException
+ArithmeticException
+NullPointException
+
+
+
+
+4. 자바기본 API
+자바에서 가장 많이 사용되는 패키지
+(import를 사용하지 않아도 자동으로 포함)
+
+ex) Object - String, Number
+
+
+"모든 객체는 Object를 상속받고있다." - 모든 클래스의 최상위 클래스
+extends java.lang.Object 없이도 자동으로 상속받게된다.
+
