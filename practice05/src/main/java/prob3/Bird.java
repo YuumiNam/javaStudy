@@ -13,6 +13,8 @@ public abstract class Bird {
 		this.name = name;
 	}
 	
+	// 메소드
 	public abstract void fly();
 	public abstract void sing();
+	public abstract String toString();
 }
