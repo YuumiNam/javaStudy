@@ -1,8 +1,10 @@
 package prob3;
 
 public abstract class Bird {
+	// 필드
 	protected String name;
-
+	
+	// getter setter
 	public String getName() {
 		return name;
 	}
@@ -10,4 +12,7 @@ public abstract class Bird {
 	public void setName(String name) {
 		this.name = name;
 	}
+	
+	public abstract void fly();
+	public abstract void sing();
 }
