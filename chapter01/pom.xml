@@ -8,6 +8,6 @@
 	<artifactId>chapter01</artifactId>
 	
 	<build>
-		<finalname>chapter01</finalname>
+		<finalName>chapter01</finalName>
 	</build>
 </project>
