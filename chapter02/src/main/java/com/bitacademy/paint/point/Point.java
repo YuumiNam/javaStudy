@@ -7,6 +7,7 @@ public class Point implements Drawable {
 	private int x;
 	private int y;
 	
+	
 	// 생성자
 	public Point() {
 	}
@@ -14,6 +15,7 @@ public class Point implements Drawable {
 		this.x = x;
 		this.y = y;
 	}
+	
 	
 	// getter setter
 	public int getX() {
