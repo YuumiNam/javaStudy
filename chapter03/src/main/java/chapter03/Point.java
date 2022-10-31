@@ -14,8 +14,8 @@ public class Point {
 
 	
 	// 메소드
-//	@Override
-//	public String toString() {
-//		return "Point [x=" + x + ", y=" + y +"]";
-//	}
+	@Override
+	public String toString() {
+		return "Point [x=" + x + ", y=" + y +"]";
+	}
 }
