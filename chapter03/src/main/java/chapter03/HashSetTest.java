@@ -10,7 +10,7 @@ public class HashSetTest {
 		// 그래서 중복인지 아닌지 걸러내는 과정에서 hashCode()를 필요로하게됨
 		// 해시코드값이 다르면 다른 객체로 판단하고, 해시 코드값이 같으면 그때 equals()메소드로 다시 비교해서 레퍼런스 값도 같다면 동등 객체로 판단함
 		
-		Set<Rect> set = new HashSet<>();
+		Set<Rect> set = new HashSet();
 		
 		Rect r1 = new Rect(10, 20);
 		Rect r2 = new Rect(10, 20);
