@@ -3,7 +3,7 @@ package prob02;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class GoodsApp {
+public class GoodsMain {
 	private static final int COUNT_GOODS = 3;
 
 	public static void main(String[] args) {
@@ -15,16 +15,16 @@ public class GoodsApp {
 		String line = sc.nextLine();
 		String[] info = line.split(" ");
 		
-		System.out.println(Arrays.toString(info));
-		
 		String name = info[0];
 		int price = Integer.parseInt(info[1]);
 		int countStock = Integer.parseInt(info[2]);
 		
-		Goods gi = new Goods(name, price, countStock);
-		gi.showInfo();
-		// 자원정리
-		sc.close();
+		goods[i] = new Goods(name, price, countStock);
 		}
+		for(int i = 0; i < goods.length; i++) {
+			goods[i].showInfo();
+		}
+		
+		sc.close();
 	}
 }

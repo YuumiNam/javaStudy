@@ -26,35 +26,27 @@ public class CalcMain {
 			
 			switch(tokens[1]) {
 				case "+" : {
-					Add add = new Add();
-					add.setValue(lValue, rValue);
-					int result = add.calculate();
-					System.out.println(">> " + result);
-					
+					Arith add = new Add();
+					add.setValue(lValue, rValue); // setValue()도 재사용할수있을까?
+					System.out.println(">> " + calculate(add));
 					break;
 				}
 				case "-" : {
-					Sub sub = new Sub();
+					Arith sub = new Sub();
 					sub.setValue(lValue, rValue);
-					int result = sub.calculate();
-					System.out.println(">> " + result);
-					
+					System.out.println(">> " + calculate(sub));			
 					break;
 				}
 				case "*" : {
-					Mul mul = new Mul();
+					Arith mul = new Mul();
 					mul.setValue(lValue, rValue);
-					int result = mul.calculate();
-					System.out.println(">> " + result);
-					
+					System.out.println(">> " + calculate(mul));				
 					break;					
 				}
 				case "/" : {
-					Div div = new Div();
+					Arith div = new Div();
 					div.setValue(lValue, rValue);
-					int result = div.calculate();
-					System.out.println(">> " + result);
-					
+					System.out.println(">> " + calculate(div));				
 					break;
 				}
 				default :  {
@@ -63,5 +55,10 @@ public class CalcMain {
 			}
 		}
 		scanner.close();
+	}
+
+	// 정적 메소드
+	private static int calculate(Arith c) {
+		return c.calculate();
 	}
 }
