@@ -19,14 +19,14 @@ public class AlphabetThread extends Thread {
 	public void run() {
 		// 락을 거는방법
 		// ArrayList에 여러개의 쓰레드가 실행될때 엉키는것을 방지 = 동기화
-		synchronized(list) {
-			list.add(null);
-		}
+//		synchronized(list) {
+//			list.add(null); // sleep도 동기화역할을 한다??
+//		}
 		
 		for(char c = 'a'; c <= 'z' ; c++) {
 			System.out.print(c + " ");
 			try {
-				Thread.sleep(300);
+				Thread.sleep(200);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
