@@ -17,7 +17,7 @@ public class HashSetTest {
 //		s.add(s2); // 객체가 달라도 값이 다르면 중복됨!!! 자료구조는 무조건 값이 중요... 객체의동일성 필요없음
 		
 		System.out.println(s.size());
-		System.out.println(s.contains(s2));
+		System.out.println(s.contains(s2)); // s1을 넣었지만 s2와 내용이 동일하므로 같은것으로 생각!!
 		
 		// 순회
 		// Set도 내부적으로 Iterator가 적용되어 for each문을 지원해줌
