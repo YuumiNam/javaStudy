@@ -34,7 +34,7 @@ public class ArrayListTest {
 		
 		
 		// 순회3
-		// 배열도 내부적으로 for each문을 지원해줌
+		// 배열도 내부적으로 Iterator가 적용되어 for each문을 지원해줌
 		for(String s:list) {
 			System.out.println(s);
 		}
