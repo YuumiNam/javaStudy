@@ -4,13 +4,13 @@ import java.util.List;
 
 public class DigitThread extends Thread {
 	// 필드
-	private List list;
+	private List<Object> list;
 	
 	// 생성자
 	public DigitThread() {
 		
 	}
-	public DigitThread(List list) {
+	public DigitThread(List<Object> list) {
 		this.list = list;
 	}
 	

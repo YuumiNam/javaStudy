@@ -4,13 +4,13 @@ import java.util.List;
 
 public class AlphabetThread extends Thread {
 	// 필드
-	private List list;
+	private List<Object> list;
 	
 	// 생성자
 	public AlphabetThread() {
 	}
 	
-	public AlphabetThread(List list) {
+	public AlphabetThread(List<Object> list) {
 		this.list = list;
 	}
 	
