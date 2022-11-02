@@ -1,0 +1,46 @@
+1. 자바 스트림기반의 IO 입출력개요
+
+
+출발지    input     프로그램      output     도착지
+파일        ->                             ->        파일
+키보드     -> (도착지)   (출발지)   ->        콘솔
+네트워크  ->                             ->        네트워크
+
+
+자바에는 기본적인 데이터입출력 API인 java.io 패키지가 존재함
+ex) File, Console, InputStream, OutputStream, Reader, Writer
+
+스트림은 단일방향으로 흘러가므로 한번에 입력과 출력을 모두 할 수 없음
+(input과 output 양쪽 모두 입력스트림과 출력스트림이 따로 필요)
+
+프로그램이 데이터를 입력받음 ex) 입력스트림(InputStream)
+프로그램이 데이터를 보냄 ex) 출력스트림(OutStream)
+
+
+             InputStream(A)                                       OutputSteam(A)                      <-byte  char->           Reader               Writer
+FileInputStream     BufferInputStream     FileOutputStream     BufferedOutputStream
+  (기반스트림)         (보조스트림)              (기반스트림)             (보조스트림)
+
+
+2. byte스트림 - InputStream과 OutputStream
+
+1) InputStream
+바이트기반 입력스트림의 최상위 클래스로 추상클래스
+모든 바이트 기반 입력 스트림은 이 클래스를 상속
+ex) FileInputStream, BufferInputStream 클래스 등등
+(키보드는 System 클래스인 변수 in을 통해서 입력이 일어나는데 자바에 내장된 객체임 InputStream의 상속을 받는다)
+
+
+2) OutputStream
+바이트기반 출력스트림의 최상위 클래스로 추상클래스
+모든 바이트 기반 출력 스트림은 이 클래스를 상속
+ex) FileOutputStream, PrintStream, BufferedOutputStream 클래스 등등
+
+
+
+
+
+
+
+
+
