@@ -8,7 +8,6 @@ public class MainApp {
 			
 			stack.push("Hello");
 			
-			stack.showBuffer();
 			
 //			stack.push("World");
 //			stack.push("!!!");

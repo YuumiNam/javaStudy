@@ -3,29 +3,24 @@ package prob5;
 public class MyStack {
 	// 필드
 	private String[] buffer;
+	private int top;
 	
 	
 	// 생성자
 	public MyStack(int size) {
-		String[] buffer = new String[size];
+		top = 0;
+		buffer = new String[size];
 	}
 	
 	
 	// 메소드
-	public void showBuffer() {
-		System.out.println(buffer);
-	}
-	
-	
+	// push를 했을때 자리가 없으면 배열의 크기를 2배 늘려줘야함
 	public void push(String s) {
-		for(int i = 0 ; i < buffer.length ; i++) {
-			if(buffer[i] == null) {
-				buffer[i] = s;
-				break;
-			}else {
-				continue;
-			}
+		if(top == buffer.length) {
+			resize();
 		}
+		buffer[top] = s;
+		top++;
 	}
 
 	public boolean isEmpty() {
@@ -40,5 +35,13 @@ public class MyStack {
 	public String pop() {
 		String s = buffer[buffer.length-1];
 		return s;
+	}
+	
+	public void resize() {
+		String[] temp = new String[buffer.length*2];
+		for(int i = 0 ; i <= top ; i++) {
+			temp[i] = buffer[i];
+		}
+		buffer = temp;
 	}
 }
