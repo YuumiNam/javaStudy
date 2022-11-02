@@ -3,7 +3,7 @@ package prob6;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ShapeTest {
+public class ShapeMain {
 
 	public static void main(String[] args) {
 		List<Shape> list = new ArrayList<Shape>();

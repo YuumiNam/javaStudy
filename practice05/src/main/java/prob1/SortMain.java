@@ -14,18 +14,12 @@ public class SortMain {
 		
 		// 정렬 알고리즘
 		for(int i = 0 ; i < count ; i++) {	
-			for(int j = 0 ; j < count ; j++) {
-				if(j == count -1) {
-					break;
-				}
+			for(int j = 0 ; j < count - 1 -i ; j++) {
 				if(array[j] < array[j+1]) {
 					int temp = array[j];
 					array[j] = array[j+1];
 					array[j+1] = temp;
-				  } 
-				else {
-					continue;
-				}
+				} 
 			}
 		}
 
