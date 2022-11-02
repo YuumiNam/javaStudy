@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.StringTokenizer;
 
 public class PhoneList01 {
 	public static void main(String[] args) {
@@ -38,7 +39,25 @@ public class PhoneList01 {
 		// 4. 처리
 		String line = null;
 		while((line = br.readLine()) != null) {
-			System.out.println(line);
+			// System.out.println(line);  이렇게쓰면 이름과 번호 사이에 ":", 번호 사이에 "-"가 안붙은채로 나옴 ex) 둘리	: 000-0000-0000
+			
+			StringTokenizer st = new StringTokenizer(line,"\t ");
+			
+			int index = 0;
+			while(st.hasMoreElements()) {
+				String token = st.nextToken();
+				if(index == 0) {
+					System.out.print(token + ":");
+				} else if(index == 1) {
+					System.out.print(token + "-");
+				} else if(index == 2) {
+					System.out.print(token + "-");
+				} else {
+					System.out.print(token);
+				}
+				index++;
+			}
+			System.out.println();
 		}
 		
 		} catch(IOException e) {
