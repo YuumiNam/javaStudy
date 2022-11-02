@@ -9,6 +9,7 @@ import java.io.Reader;
 
 public class FileReaderTest {
 	public static void main(String[] args) {
+		// Reader(char스트림 최상위 input클래스,추상)를 상속받는 FileReader
 		Reader in = null;
 		InputStream is = null;
 		
@@ -26,6 +27,7 @@ public class FileReaderTest {
 			System.out.println("count:" + count);
 			System.out.println("====================");
 			
+			count = 0;
 			is = new FileInputStream("1234.txt"); 
 			while((data = is.read()) != -1) {
 				System.out.print((char)data);

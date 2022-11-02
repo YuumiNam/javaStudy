@@ -9,8 +9,8 @@ import java.io.OutputStream;
 
 public class FileCopy {
 	public static void main(String[] args) {
-		// InputStream(바이트스트림 최상위 input클래스,추상)을 상속받는 FileInputStream
-		// OutputStream(바이트스트림 최상위 output클래스,추상)을 상속받는 FileOutputStream
+		// InputStream(byte스트림 최상위 input클래스,추상)을 상속받는 FileInputStream
+		// OutputStream(byte스트림 최상위 output클래스,추상)을 상속받는 FileOutputStream
 		InputStream is = null;
 		OutputStream os = null;
 		
