@@ -17,13 +17,16 @@ ex) File, Console, InputStream, OutputStream, Reader, Writer
 프로그램이 데이터를 보냄 ex) 출력스트림(OutStream)
 
 
-         InputStream(A)                         OutputSteam(A)                  <-byte  char->       Reader               Writer
-FileInputStream   BufferInputStream     FileOutputStream   BufferedOutputStream
+            InputStream(A)                                  OutputSteam(A)                        <-byte  char->         Reader(A)               Writer(A)   
+FileInputStream   BufferInputStream     FileOutputStream   BufferedOutputStream                       FileReader
   (기반스트림)       (보조스트림)            (기반스트림)          (보조스트림)
 
+                        BufferInputStream                                BufferedOutputStream
+                          (보조스트림)                                       (보조스트림)
 
 기반스트림 : 프로그램 밖에서 실제로 스트림을 받아오는 객체(파일, 키보드, 네트워크 어디서든 프로그램 밖의 데이터를 받아옴)
 보조스트림 : 기반스트림이 읽어온 데이터를 활용. 따라서 기반스트림을 생성자의 매개변수로 갖는다.
+(오버라이드의 상속개념이 아님, IO의 종류가 너무 많아서 오버라이드를 하기에는 한계가있음. 그래서 런타임때 확장이일어나도록함)
 
 
 
