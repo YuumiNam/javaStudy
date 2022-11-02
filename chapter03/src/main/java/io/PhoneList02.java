@@ -9,8 +9,6 @@ import java.util.Scanner;
 
 public class PhoneList02 {
 	public static void main(String[] args) throws FileNotFoundException { // throws e : 예외를 회피함
-		BufferedReader br = null;
-		
 		File file = new File("phone.txt"); // Input Output과 관련은 없는 클래스임
 		
 		if(!file.exists()) {
@@ -25,7 +23,7 @@ public class PhoneList02 {
 		
 		System.out.println("======전화번호======");
 		
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(file);
 		while(sc.hasNextLine()) {
 			String name = sc.next();
 			String phone01 = sc.next();
