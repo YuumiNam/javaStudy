@@ -1,10 +1,10 @@
 1. 자바 스트림기반의 IO 입출력개요
 
 
-출발지    input     프로그램      output     도착지
-파일        ->                             ->        파일
-키보드     -> (도착지)   (출발지)   ->        콘솔
-네트워크  ->                             ->        네트워크
+출발지    input     프로그램        output     도착지
+파일      ->                       ->        파일
+키보드     ->    (도착지)   (출발지)   ->        콘솔
+네트워크   ->                       ->        네트워크
 
 
 자바에는 기본적인 데이터입출력 API인 java.io 패키지가 존재함
@@ -17,9 +17,9 @@ ex) File, Console, InputStream, OutputStream, Reader, Writer
 프로그램이 데이터를 보냄 ex) 출력스트림(OutStream)
 
 
-            InputStream(A)                                  OutputSteam(A)                          <-byte  char->           Reader(A)                     Writer(A)   
-FileInputStream   BufferedInputStream     FileOutputStream   BufferedOutputStream                       FileReader     BufferedReader
-  (기반스트림)       (보조스트림)            (기반스트림)          (보조스트림)                                        (기반스트림)    (보조스트림)
+            InputStream(A)                          OutputSteam(A)                <-byte  char->        Reader(A)           Writer(A)   
+FileInputStream   BufferedInputStream     FileOutputStream   BufferedOutputStream                FileReader  BufferedReader
+  (기반스트림)       (보조스트림)            (기반스트림)          (보조스트림)                              (기반스트림)   (보조스트림)
 
 
 기반스트림 : 프로그램 밖에서 실제로 스트림을 받아오는 객체(파일, 키보드, 네트워크 어디서든 프로그램 밖의 데이터를 받아옴)
@@ -46,3 +46,10 @@ ex) FileOutputStream, PrintStream, BufferedOutputStream 클래스 등등
 보조스트림은 자료입출력을 직접 할 수 없다.
 즉, 기반스트림이 읽어온 데이터를 활용하기때문에 기반스트림을 생성자의 매개변수로 갖는다.
 (오버라이드의 상속개념이 아님, IO의 종류가 너무 많아서 오버라이드를 하기에는 한계가있음. 그래서 런타임때 확장이일어나도록함)
+
+
+
+
+4. InputStreamReader, OutputStreamReader
+byte단위로 자료를 읽으면 한글같은 문자는 깨진다. (그래서 문자는 Reader와 Writer에서 상속받은 스트림을 쓰는것)
+하지만, 바이트자료만 입력되는 스트림도 있다. ex) System.in , (네트워크에서 소켓이나 인터넷이 연결되었을때 읽거나쓰는) InputStream과 OutputStream
