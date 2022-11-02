@@ -17,9 +17,9 @@ ex) File, Console, InputStream, OutputStream, Reader, Writer
 프로그램이 데이터를 보냄 ex) 출력스트림(OutStream)
 
 
-             InputStream(A)                                       OutputSteam(A)                      <-byte  char->           Reader               Writer
-FileInputStream     BufferInputStream     FileOutputStream     BufferedOutputStream
-  (기반스트림)         (보조스트림)              (기반스트림)             (보조스트림)
+            InputStream(A)                                  OutputSteam(A)                      <-byte  char->           Reader               Writer
+FileInputStream   BufferInputStream     FileOutputStream   BufferedOutputStream
+  (기반스트림)       (보조스트림)            (기반스트림)          (보조스트림)
 
 
 2. byte스트림 - InputStream과 OutputStream
