@@ -24,44 +24,38 @@ public class CalcMain {
 			int lValue = Integer.parseInt(tokens[0]);
 			int rValue = Integer.parseInt(tokens[2]);
 			
+			
 			Arith arith = null;
 			
 			switch(tokens[1]) {
 				case "+" : {
-					Arith add = new Add();
-					add.setValue(lValue, rValue); // setValue()도 재사용할수있을까?
-					System.out.println(">> " + calculate(add));
+					arith = new Add();
 					break;
 				}
 				case "-" : {
-					Arith sub = new Sub();
-					sub.setValue(lValue, rValue);
-					System.out.println(">> " + calculate(sub));			
+					arith = new Sub();		
 					break;
 				}
 				case "*" : {
-					Arith mul = new Mul();
-					mul.setValue(lValue, rValue);
-					System.out.println(">> " + calculate(mul));				
+					arith = new Mul();
 					break;					
 				}
 				case "/" : {
-					Arith div = new Div();
-					div.setValue(lValue, rValue);
-					System.out.println(">> " + calculate(div));				
+					arith = new Div();			
 					break;
-				}
-				default :  {
-					System.out.println(">> 알 수 없는 연산입니다.");
 				}
 			}
 			
+			if (arith == null) {
+				System.out.println("알수없는 연산입니다");
+				continue;
+			}
+			
+			arith.setValue(lValue, rValue);
+			int result = arith.calculate();
+			System.out.println(">> " + result);
+			
 		}
 		scanner.close();
-	}
-
-	// 정적 메소드
-	private static int calculate(Arith c) {
-		return c.calculate();
 	}
 }
