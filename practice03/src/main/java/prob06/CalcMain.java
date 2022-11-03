@@ -24,6 +24,8 @@ public class CalcMain {
 			int lValue = Integer.parseInt(tokens[0]);
 			int rValue = Integer.parseInt(tokens[2]);
 			
+			Arith arith = null;
+			
 			switch(tokens[1]) {
 				case "+" : {
 					Arith add = new Add();
@@ -53,6 +55,7 @@ public class CalcMain {
 					System.out.println(">> 알 수 없는 연산입니다.");
 				}
 			}
+			
 		}
 		scanner.close();
 	}
